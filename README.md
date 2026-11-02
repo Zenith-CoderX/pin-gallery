@@ -8,9 +8,7 @@ Pinterest-style masonry gallery. Login required to view; only admins can upload/
    (`SESSION_SECRET` from `openssl rand -base64 32`; Supabase URL and service-role key from Project Settings, API).
 3. Supabase, SQL editor: run `supabase/schema.sql` (creates `users`, `images` and a private `images` bucket).
 4. `npm run dev`, open http://localhost:3000, sign up.
-5. Make yourself admin (SQL editor):
-   `update public.users set role = 'admin' where email = 'you@example.com';`
-   Log out and in once; the "Add image" button appears.
+
 
 ## Notes
 - Custom auth: bcrypt + JWT in an HTTP-only cookie (jose). Supabase is only DB and storage.
